@@ -1,26 +1,26 @@
 #Pikpak-Proxy
-DOMAIN, access.mypikpak.com
-DOMAIN, access.mypikpak.net
-DOMAIN, adjust.mypikpak.com
-DOMAIN, api-audit.mypikpak.com
-DOMAIN, api-drive.mypikpak.com
-DOMAIN, api-drive.mypikpak.net
-DOMAIN, api-feedback.mypikpak.com
-DOMAIN, config.mypikpak.com
-DOMAIN, copyright.mypikpak.com
-DOMAIN, drive.mypikpak.com
-DOMAIN, feedback.mypikpak.com
-DOMAIN, i.mypikpak.com
-DOMAIN, inapp.mypikpak.com
-DOMAIN, info.mypikpak.com
-DOMAIN, pay-gateway.mypikpak.com
-DOMAIN, pay-gateway.mypikpak.net
-DOMAIN, pay.mypikpak.com
-DOMAIN, pay.mypikpak.net
-DOMAIN, static.mypikpak.com
-DOMAIN, toapp.mypikpak.com
-DOMAIN, user.mypikpak.com
-DOMAIN, user.mypikpak.net
-DOMAIN, www.copyright.mypikpak.com
-DOMAIN, www.drive.mypikpak.com
-DOMAIN, www.mypikpak.com
+access.mypikpak.com
+access.mypikpak.net
+adjust.mypikpak.com
+api-audit.mypikpak.com
+api-drive.mypikpak.com
+api-drive.mypikpak.net
+api-feedback.mypikpak.com
+config.mypikpak.com
+copyright.mypikpak.com
+drive.mypikpak.com
+feedback.mypikpak.com
+i.mypikpak.com
+inapp.mypikpak.com
+info.mypikpak.com
+pay-gateway.mypikpak.com
+pay-gateway.mypikpak.net
+pay.mypikpak.com
+pay.mypikpak.net
+static.mypikpak.com
+toapp.mypikpak.com
+user.mypikpak.com
+user.mypikpak.net
+www.copyright.mypikpak.com
+www.drive.mypikpak.com
+www.mypikpak.com
