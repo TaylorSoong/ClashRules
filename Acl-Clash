@@ -74,14 +74,14 @@ rule-providers:
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaMedia.yaml"
     path: ./ruleset/acl/ChinaMedia.yaml
-    interval: 86400 
+    interval: 86400
 
-  Download:
+  Applications:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Download.yaml"
-    path: ./ruleset/acl/Download.yaml
-    interval: 86400 
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/acl/applications.yaml
+    interval: 86400
 
   LocalAreaNetwork:
     type: http
@@ -121,7 +121,8 @@ rule-providers:
 rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,Download,DIRECT
+
+  - RULE-SET,Applications,DIRECT
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,Apple,DIRECT
 
