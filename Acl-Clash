@@ -116,29 +116,39 @@ rule-providers:
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/UnBan.yaml"
     path: ./ruleset/acl/UnBan.yaml
-    interval: 86400 
+    interval: 86400
+
+  Pikpak:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/TaylorSoong/TSRules/main/Pikpak-Proxy.yaml"
+    path: ./ruleset/acl/Pikpak.yaml
+    interval: 86400
 
 rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-
+#Pikpak
+  - RULE-SET,Pikpak,PROXY
+  - DOMAIN-KEYWORD,pikpak,DIRECT
+#直连
   - RULE-SET,Applications,DIRECT
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,Apple,DIRECT
-
+#AdBlock
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanEasyList,REJECT
   - RULE-SET,BanEasyListChina,REJECT
   - RULE-SET,BanEasyPrivacy,REJECT
   - RULE-SET,BanProgramAD,REJECT
-
+#直连
   - RULE-SET,UnBan,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,ChinaMedia,DIRECT
   - RULE-SET,ChinaCompanyIp,DIRECT
   - RULE-SET,ChinaIp,DIRECT
   - RULE-SET,ChinaIpV6,DIRECT
-
+#代理
   - RULE-SET,ProxyGFWlist,PROXY
   - RULE-SET,ProxyLite,PROXY
   - RULE-SET,ProxyMedia,PROXY
