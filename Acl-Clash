@@ -43,7 +43,7 @@ rule-providers:
     
   ChinaCompanyIp:
     type: http
-    behavior: classical
+    behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaCompanyIp.yaml"
     path: ./ruleset/acl/ChinaCompanyIp.yaml
     interval: 86400 
@@ -57,7 +57,7 @@ rule-providers:
 
   ChinaIp:
     type: http
-    behavior: classical
+    behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaIp.yaml"
     path: ./ruleset/acl/ChinaIp.yaml
     interval: 86400 
@@ -131,10 +131,6 @@ rules:
 #Pikpak
   - RULE-SET,Pikpak,PROXY
   - DOMAIN-KEYWORD,pikpak,DIRECT
-#直连
-  - RULE-SET,Applications,DIRECT
-  - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,Apple,DIRECT
 #AdBlock
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanEasyList,REJECT
@@ -142,17 +138,21 @@ rules:
   - RULE-SET,BanEasyPrivacy,REJECT
   - RULE-SET,BanProgramAD,REJECT
 #直连
+  - RULE-SET,Applications,DIRECT
+  - RULE-SET,LocalAreaNetwork,DIRECT
+  - RULE-SET,Apple,DIRECT
+#代理
+  - RULE-SET,ProxyGFWlist,PROXY
+  - RULE-SET,ProxyLite,PROXY
+  - RULE-SET,ProxyMedia,PROXY
+#直连
   - RULE-SET,UnBan,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,ChinaMedia,DIRECT
   - RULE-SET,ChinaCompanyIp,DIRECT
   - RULE-SET,ChinaIp,DIRECT
   - RULE-SET,ChinaIpV6,DIRECT
-#代理
-  - RULE-SET,ProxyGFWlist,PROXY
-  - RULE-SET,ProxyLite,PROXY
-  - RULE-SET,ProxyMedia,PROXY
-
+#最终匹配
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
