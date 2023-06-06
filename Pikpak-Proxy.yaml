@@ -2,6 +2,7 @@ payload:
   - DOMAIN,access.mypikpak.com
   - DOMAIN,access.mypikpak.net
   - DOMAIN,access.mypikpak.me
+  - DOMAIN,access.pikpakdrive.com
   - DOMAIN,adjust.mypikpak.com
   - DOMAIN,api-audit.mypikpak.com
   - DOMAIN,api-drive.mypikpak.com
