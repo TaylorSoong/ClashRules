@@ -1,6 +1,6 @@
 #Pikpak-Proxies
-DOMAIN,access.mypikpak.com
-DOMAIN,access.mypikpak.net
+#DOMAIN,access.mypikpak.com
+#DOMAIN,access.mypikpak.net
 DOMAIN,adjust.mypikpak.com
 DOMAIN,api-audit.mypikpak.com
 DOMAIN,api-drive.mypikpak.com
