@@ -7,6 +7,8 @@ payload:
   - DOMAIN,api-audit.mypikpak.com
   - DOMAIN,api-drive.mypikpak.com
   - DOMAIN,api-drive.mypikpak.net
+  - DOMAIN,api-drive.mypikpak.me
+  - DOMAIN,api-drive.pikpakdrive.com
   - DOMAIN,api-feedback.mypikpak.com
   - DOMAIN,config.mypikpak.com
   - DOMAIN,copyright.mypikpak.com
