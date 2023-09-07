@@ -24,4 +24,4 @@
 #host,www.copyright.mypikpak.com,proxy
 #host,www.drive.mypikpak.com,proxy
 #host,www.mypikpak.com,proxy
-host-keyword,dl-a10b,direct
+host-keyword,dl-a10b-,direct
