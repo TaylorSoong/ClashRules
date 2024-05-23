@@ -1,0 +1,33 @@
+[Unit]
+Description=Rclone-AliYun
+AssertPathIsDirectory=LocalFolder
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=rclone mount \
+  Alist:Aliyun /home/media/AliYun \
+  --use-mmap \
+  --user-agent=root \
+  --umask 000 \
+  --gid=000
+  --uid=000
+  --allow-other \
+  --allow-non-empty \
+  --header "Referer:https://www.aliyundrive.com/"
+  --dir-cache-time 24h \
+  --cache-dir=/home/media/cache \
+  --vfs-cache-mode full \
+  --buffer-size 512M \
+  --vfs-read-chunk-size 16M \
+  --vfs-read-chunk-size-limit 64M \
+  --vfs-cache-max-size 10G
+ExecStop=umount /home/media/AliYun
+Restart=on-abort
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+[Install]
+WantedBy=default.target
+EOF

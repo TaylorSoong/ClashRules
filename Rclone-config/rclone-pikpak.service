@@ -1,0 +1,29 @@
+[Unit]
+Description=Rclone
+AssertPathIsDirectory=LocalFolder
+After=network-online.target
+#Before=docker.target
+
+[Service]
+Type=simple
+ExecStart=rclone mount \
+  Pikpak: /home/media/Pikpak \
+  --allow-other \
+  --poll-interval=15s \
+  --dir-cache-time=15s \
+  --cache-dir=/home/media/cache \
+  --vfs-cache-mode=full \
+  --vfs-cache-max-size=100G \
+  --vfs-read-chunk-size 64M \
+  --vfs-read-chunk-size-limit 256M \
+  --buffer-size 128M \
+  --vfs-cache-max-age=48h
+ExecStop=umount  /home/media/Pikpak
+Restart=on-abort
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+[Install]
+WantedBy=default.target
+EOF
